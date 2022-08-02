@@ -1,5 +1,5 @@
-import Header from "../components/authComponents/Header"
-import FormBody from "../components/authComponents/FormBody"
+import Header from "../components/formComponents/Header"
+import FormBody from "../components/formComponents/FormBody"
 import { loginFields } from "../constants/Login"
 import React, { useState } from "react";
 
@@ -8,7 +8,14 @@ let fieldState = {};
 export function Login(){
     const [loginState, setLoginState] = useState(fieldState);
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
+    const inputChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
+        setLoginState({
+            ...loginState,
+            [event.target.id]:[event.target.value]
+        })
+    }
+
+    const selectChange = (event : React.ChangeEvent<HTMLSelectElement>) => {
         setLoginState({
             ...loginState,
             [event.target.id]:[event.target.value]
@@ -28,10 +35,12 @@ export function Login(){
             <FormBody 
                 param={loginFields.input} 
                 title={loginFields.title}
+                useFooter={loginFields.useFooter}
                 footer={loginFields.footer}
                 buttonParam={loginFields.button}
                 handleSubmit = {handleSubmit}
-                handleChange = {handleChange}
+                inputChange = {inputChange}
+                selectChange={selectChange}
                 />
         </>
     )

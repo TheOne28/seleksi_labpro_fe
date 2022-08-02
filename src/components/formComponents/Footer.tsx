@@ -1,11 +1,6 @@
 import CSS from 'csstype'
 import { Link } from 'react-router-dom';
-
-export type FooterParam = {
-    footer: string,
-    linkText: string,
-    linkUrl : string,
-}
+import { FooterParam } from './Param';
 
 const styles: CSS.Properties = {
     color: '#263238',    

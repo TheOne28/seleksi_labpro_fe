@@ -1,0 +1,7 @@
+
+
+export function RiwayatMutasi(){
+    return (
+        <></>
+    )
+}

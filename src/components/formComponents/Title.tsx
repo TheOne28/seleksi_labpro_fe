@@ -1,8 +1,5 @@
 import CSS from 'csstype';
-
-type TitleParam = {
-    title: string,
-}
+import { HeaderParam } from './Param';
 
 const styles: CSS.Properties = {
     color:'#263238',
@@ -12,11 +9,11 @@ const styles: CSS.Properties = {
 }
 
 export default function Title({
-    title
-}: TitleParam){
+    heading
+}: HeaderParam){
     return (
         <div style={styles}>
-            {title}
+            {heading}
         </div>
     )
 }

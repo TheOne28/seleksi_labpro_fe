@@ -1,7 +1,7 @@
 
 export const custNavbarFields = {
     bg: "dark",
-    variant:"dark",
+    variant: "dark",
     content:[
         {
             type: "brand",
@@ -35,24 +35,22 @@ export const custNavbarFields = {
                     },
                     {
                         text: "Transfer",
-                        linkTo: "/histTransfer",
-                    }
-                ]
-            }
-        },{
-            type: "text",
-            param : {
-                content : [
-                    {
-                        text: "Vincent",
-                        linkTo: "/vincent",
-                    },
-                    {
-                        text: "Logout",
-                        linkTo: "/logout",
+                        linkTo: "/histtransfer",
                     }
                 ]
             }
         }
-    ]
+    ],
+    text:{
+        content:[
+            {
+                text: "Vincent",
+                linkTo: "/profile",
+            },
+            {
+                text: "Logout",
+                linkTo: "/logout",
+            }
+        ]
+    }
 }

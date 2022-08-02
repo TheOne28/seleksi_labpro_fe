@@ -1,18 +1,10 @@
 import Form from 'react-bootstrap/Form'
-import { InputParam, Input} from './Input'
+import {Input} from './Input'
 import Title from './Title';
 import CSS from 'csstype';
-import {Footer, FooterParam} from './Footer';
-import {FormButton, ButtonParam} from './FormButton';
-
-type FormParam = {
-    param: InputParam[],
-    title: string,
-    footer: FooterParam,
-    buttonParam: ButtonParam,
-    handleSubmit : React.FormEventHandler<HTMLFormElement>,
-    handleChange : React.ChangeEventHandler<HTMLInputElement>,
-}
+import {Footer} from './Footer';
+import {FormButton} from './FormButton';
+import { FormParam } from './Param';
 
 const styles: CSS.Properties = {
     marginLeft: '15%',
@@ -20,6 +12,7 @@ const styles: CSS.Properties = {
     marginBottom: "5%",
     border: 'solid grey',
     borderRadius: '15px',
+    marginTop: "15%",
     
 }
 
@@ -27,26 +20,33 @@ const styles: CSS.Properties = {
 export default function FormBody({
     param,
     title,
+    useFooter,
     footer,
     buttonParam,
     handleSubmit,
-    handleChange,
+    inputChange,
+    selectChange
 }: FormParam){
 
     return (
         <Form style={styles} onSubmit={handleSubmit}>  
-            <Title title={title}/>
+            <Title heading={title}/>
             {
                 param.map(each =>
                     <Input
                         param={each}
-                        handleChange={handleChange}
+                        inputChange={inputChange}
+                        selectChange={selectChange}
                     />
                 )
             }
-            <Footer footer={footer.footer}
-                    linkUrl={footer.linkUrl}
-                    linkText={footer.linkText}/>
+            {useFooter? (<Footer footer={footer.footer}
+                            linkUrl={footer.linkUrl}
+                            linkText={footer.linkText}/>)
+                    :
+                    <></>
+            }
+
             <FormButton variant={buttonParam.variant}
                         text={buttonParam.text}
                         type={buttonParam.type}/>

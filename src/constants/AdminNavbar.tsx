@@ -11,48 +11,39 @@ export const adminNavbarFields = {
             }
         },
         {
-            type: "link",
-            param: {
-                text: "Transfer",
-                linkTo : "/transfer",
-            }
-        },
-        {
-            type: "link",
-            param : {
-                text: "Mutasi",
-                linkTo : "/mutasi",
-            }
-        },
-        {
             type: "dropdown",
             param: {
-                title: "Riwayat",
+                title: "Verifikasi",
                 content: [
                     {
+                        text: "Akun",
+                        linkTo: "/verfAkun",
+                    },
+                    {
                         text: "Mutasi",
-                        linkTo: "/histmutasi",
+                        linkTo: "/verfmutasi",
                     },
-                    {
-                        text: "Transfer",
-                        linkTo: "/histTransfer",
-                    }
                 ]
             }
-        },{
-            type: "text",
+        },
+        {
+            type: "link",
             param : {
-                content : [
-                    {
-                        text: "Vincent",
-                        linkTo: "/vincent",
-                    },
-                    {
-                        text: "Logout",
-                        linkTo: "/logout",
-                    }
-                ]
+                text: "Search",
+                linkTo : "/search",
             }
-        }
-    ]
+        },
+    ],
+    text: {
+        content: [
+            {
+                text: "admin",
+                linkTo: "/admin",
+            },
+            {
+                text: "Logout",
+                linkTo: "/logout",
+            }
+        ]
+    }
 }

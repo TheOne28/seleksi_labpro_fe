@@ -1,7 +1,12 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { Login } from "./pages/Login";
 import { SignUp } from "./pages/Signup";
-import { Profile } from "./pages/customer/Profile";
+import { Profile as ProfileCustomer} from "./pages/customer/Profile";
+import { Profile as ProfileAdmin} from "./pages/admin/Profile";
+import { Transfer } from "./pages/customer/Transfer";
+import { Mutasi } from "./pages/customer/Mutasi";
+import { RiwayatMutasi } from "./pages/customer/RiwayatMutasi";
+import { RiwayatTransfer } from "./pages/customer/RiwayatTransfer";
 import './App.css'
 
 function App() {
@@ -12,7 +17,12 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login/>}></Route>
             <Route path="/signup" element={<SignUp/>}></Route>
-            <Route path="/profile" element={<Profile/>}></Route>
+            <Route path="/profile" element={<ProfileCustomer/>}></Route>
+            <Route path="/admin" element={<ProfileAdmin/>}></Route>
+            <Route path="/transfer" element={<Transfer/>}></Route>
+            <Route path="/mutasi" element={<Mutasi/>}></Route>
+            <Route path="/histmutasi" element={<RiwayatMutasi/>}></Route>
+            <Route path="/histtransfer" element={<RiwayatTransfer/>}></Route>
           </Routes>
         </Router>
       </div>

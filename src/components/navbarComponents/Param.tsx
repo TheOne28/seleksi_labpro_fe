@@ -14,11 +14,12 @@ export type TextParam = {
 
 export type ContentParam = {
     type: string,
-    param : LinkParam | DropdownParam | TextParam 
+    param : LinkParam | DropdownParam
 }
 
 export type NavbarParam = {
-    bg : string,
+    bg : "light" | "dark" | undefined,
     variant: string,
     content: ContentParam[],
+    text: TextParam,
 }

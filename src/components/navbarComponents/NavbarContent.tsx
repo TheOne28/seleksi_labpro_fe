@@ -1,7 +1,6 @@
 import NavbarBrand from "./NavbarBrand";
 import NavbarDropdown from "./NavbarDropdown";
 import NavbarLink from "./NavbarLink";
-import NavbarText from "./NavbarText";
 import { ContentParam } from "./Param";
 
 export default function NavbarContent({
@@ -27,13 +26,6 @@ export default function NavbarContent({
         return (
             //@ts-ignore
             <NavbarLink text={param.text} linkTo={param.linkTo}/>
-        )
-    }
-
-    if(type === "text"){
-        return (
-            //@ts-ignore
-            <NavbarText content={param.content} />
         )
     }
 

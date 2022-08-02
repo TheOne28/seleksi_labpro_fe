@@ -2,6 +2,7 @@
 export const signUpFields = {
     heading: "Selamat Datang",
     title : "Sign Up",
+    useFooter:true,
     footer:{
         footer: "Sudah pernah di sini? Lakukan ",
         linkText: "log in",
@@ -21,6 +22,7 @@ export const signUpFields = {
             isRequired: true,
             placeholder: "example",
             accept:"",
+            option:[],
         },
         {
             label: "Username",
@@ -30,6 +32,7 @@ export const signUpFields = {
             isRequired: true,
             placeholder: "example",
             accept:"",
+            option:[],
         },
         {
             label: "Password",
@@ -39,6 +42,7 @@ export const signUpFields = {
             isRequired: true,
             placeholder: "***********",
             accept:"",
+            option:[],
         },
         {
             label: "Foto KTP",
@@ -48,6 +52,7 @@ export const signUpFields = {
             isRequired: true,
             placeholder: "No file chosen",
             accept:"image/png, image/jpeg",
+            option:[],
         }
     ]
 }

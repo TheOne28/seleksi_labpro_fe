@@ -1,8 +1,5 @@
 import CSS from 'csstype'
-
-type HeaderParam = {
-    heading: string,
-}
+import { HeaderParam } from './Param';
 
 const styles: CSS.Properties = {
     color: '#263238',    

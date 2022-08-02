@@ -1,11 +1,6 @@
 import Button from 'react-bootstrap/Button'
 import CSS from 'csstype'
-
-export type ButtonParam = {
-    variant: string,
-    text: string,
-    type:string,
-}
+import { ButtonParam } from './Param'
 
 const stylesButton: CSS.Properties ={
     width: '80%',

@@ -2,6 +2,7 @@
 export const loginFields = {
     heading: "Halo!",
     title: "Login",
+    useFooter:true,
     footer: {
         footer: "Baru pertama kali? Silahkan lakukan ",
         linkText: "sign up",
@@ -21,6 +22,7 @@ export const loginFields = {
             isRequired: true,
             placeholder:"example",
             accept: "",
+            option: []
         },
         {
             label: "Password",
@@ -30,6 +32,7 @@ export const loginFields = {
             isRequired: true,
             placeholder:"************",
             accept: "",
+            option: [],
         }
     ]   
 }
