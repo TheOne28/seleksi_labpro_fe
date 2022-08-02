@@ -2,41 +2,54 @@ import Form from 'react-bootstrap/Form'
 import { InputParam, Input} from './Input'
 import Title from './Title';
 import CSS from 'csstype';
-import Footer from './Footer';
+import {Footer, FooterParam} from './Footer';
+import {FormButton, ButtonParam} from './FormButton';
 
 type FormParam = {
     param: InputParam[],
     title: string,
-    footer: string,
+    footer: FooterParam,
+    buttonParam: ButtonParam,
+    handleSubmit : React.FormEventHandler<HTMLFormElement>,
+    handleChange : React.ChangeEventHandler<HTMLInputElement>,
 }
 
 const styles: CSS.Properties = {
     marginLeft: '15%',
     marginRight: '15%',
+    marginBottom: "5%",
     border: 'solid grey',
-    borderRadius: '15px'
+    borderRadius: '15px',
+    
 }
+
 
 export default function FormBody({
     param,
     title,
-    footer
+    footer,
+    buttonParam,
+    handleSubmit,
+    handleChange,
 }: FormParam){
+
     return (
-        <Form style={styles}>  
+        <Form style={styles} onSubmit={handleSubmit}>  
             <Title title={title}/>
             {
                 param.map(each =>
                     <Input
-                        label={each.label}
-                        placeholder={each.placeholder}
-                        type={each.type}
-                        isRequired={each.isRequired}
-                        name={each.name}
+                        param={each}
+                        handleChange={handleChange}
                     />
                 )
             }
-            <Footer footer={footer}/>
+            <Footer footer={footer.footer}
+                    linkUrl={footer.linkUrl}
+                    linkText={footer.linkText}/>
+            <FormButton variant={buttonParam.variant}
+                        text={buttonParam.text}
+                        type={buttonParam.type}/>
         </Form>
     )
 }

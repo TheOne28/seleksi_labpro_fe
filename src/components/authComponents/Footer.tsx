@@ -1,24 +1,34 @@
 import CSS from 'csstype'
+import { Link } from 'react-router-dom';
 
-type FooterParam = {
+export type FooterParam = {
     footer: string,
+    linkText: string,
+    linkUrl : string,
 }
 
 const styles: CSS.Properties = {
     color: '#263238',    
-    fontSize: '24px',
+    fontSize: '20px',
     textAlign: 'center',
     paddingTop:  '10px',
     paddingBottom: '30px',
     fontWeight: 900,
 };
 
-export default function Footer({
+export function Footer({
     footer,
+    linkUrl,
+    linkText,
 } : FooterParam){
     return(
         <div style={styles}>
-            {footer }
+            <p>
+                {footer} {' '}
+                <Link to={linkUrl}>
+                    {linkText}
+                </Link>
+            </p>
         </div>
     )
 }

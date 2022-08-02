@@ -7,7 +7,7 @@ type TitleParam = {
 const styles: CSS.Properties = {
     color:'#263238',
     fontSize:'32px',
-    paddingTop: '5px',
+    paddingTop: '5px',  
     textAlign: 'center',
 }
 

@@ -8,7 +8,7 @@ const styles: CSS.Properties = {
     color: '#263238',    
     fontSize: '64px',
     textAlign: 'center',
-    marginTop: '100px',
+    marginTop: '5%',
     marginBottom: '20px',
     fontWeight: 900,
 };
