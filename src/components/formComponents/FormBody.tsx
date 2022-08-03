@@ -23,6 +23,7 @@ export default function FormBody({
     useFooter,
     footer,
     buttonParam,
+    disable,
     handleSubmit,
     inputChange,
     selectChange
@@ -34,6 +35,7 @@ export default function FormBody({
             {
                 param.map(each =>
                     <Input
+                        disable={disable}
                         param={each}
                         inputChange={inputChange}
                         selectChange={selectChange}

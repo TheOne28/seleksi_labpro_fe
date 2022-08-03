@@ -27,6 +27,7 @@ export type InputParam = {
 
 export type InputConfig = {
     param: InputParam,
+    disable : boolean,
     inputChange: React.ChangeEventHandler<HTMLInputElement>
     selectChange: React.ChangeEventHandler<HTMLSelectElement>
 }
@@ -35,6 +36,7 @@ export type FormParam = {
     param: InputParam[],
     title: string,
     useFooter: boolean,
+    disable: boolean,
     footer: FooterParam,
     buttonParam: ButtonParam,
     handleSubmit : React.FormEventHandler<HTMLFormElement>,

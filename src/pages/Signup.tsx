@@ -49,6 +49,7 @@ export function SignUp(){
                 param={signUpFields.input} 
                 title={signUpFields.title}
                 footer={signUpFields.footer}
+                disable={signUpFields.disable}
                 useFooter={signUpFields.useFooter}
                 buttonParam={signUpFields.button}
                 handleSubmit = {handleSubmit}

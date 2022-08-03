@@ -2,6 +2,7 @@
 export const signUpFields = {
     heading: "Selamat Datang",
     title : "Sign Up",
+    disable : false,
     useFooter:true,
     footer:{
         footer: "Sudah pernah di sini? Lakukan ",

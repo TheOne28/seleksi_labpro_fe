@@ -3,25 +3,22 @@ import { PhotoParam } from './Params'
 import CSS from 'csstype'
 
 const styles : CSS.Properties = {   
-    marginTop : "10%",
-    marginLeft: "",
-    marginRight: "20%",
-    maxWidth: "20%",
-    maxHeight: "50%",
-    border: "solid",
-    float:"right",
-
+    border: "none",
 } 
+
+const photoStyles: CSS.Properties ={
+    height: "clamp(6.25rem, -11.0577rem + 48.0769vw, 25rem)",
+    width: "clamp(6.25rem, -11.0577rem + 48.0769vw, 25rem)",
+    border:"none"
+}
 
 export default function Photo({
     photoUrl
 }: PhotoParam){
 
     return(
-        <div style={styles}>
-            <Card >
-                <Card.Img variant="top" src={photoUrl}></Card.Img>
+            <Card style={styles} >
+                <Card.Img variant="top" src={photoUrl} style={photoStyles}></Card.Img>
             </Card>
-        </div>
     )
 }

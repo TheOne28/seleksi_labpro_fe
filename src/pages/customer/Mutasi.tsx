@@ -35,6 +35,7 @@ export function Mutasi(){
                 param={mutasiFields.input} 
                 title={mutasiFields.title}
                 useFooter={mutasiFields.useFooter}
+                disable={false}
                 footer={mutasiFields.footer}
                 buttonParam={mutasiFields.button}
                 handleSubmit = {handleSubmit}

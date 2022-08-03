@@ -34,6 +34,7 @@ export function Transfer(){
             <FormBody 
                 param={transferFields.input} 
                 title={transferFields.title}
+                disable={false}
                 useFooter={transferFields.useFooter}
                 footer={transferFields.footer}
                 buttonParam={transferFields.button}

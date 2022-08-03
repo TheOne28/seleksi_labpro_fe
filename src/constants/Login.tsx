@@ -3,6 +3,7 @@ export const loginFields = {
     heading: "Halo!",
     title: "Login",
     useFooter:true,
+    disable: false,
     footer: {
         footer: "Baru pertama kali? Silahkan lakukan ",
         linkText: "sign up",

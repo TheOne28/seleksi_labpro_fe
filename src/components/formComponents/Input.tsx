@@ -11,6 +11,7 @@ const styles: CSS.Properties= {
 
 function GenerateInput({
     param,
+    disable,
     inputChange,
     selectChange,
 }: InputConfig){
@@ -20,7 +21,8 @@ function GenerateInput({
                              placeholder={param.placeholder}
                              className={param.name}
                              id = {param.id}
-                             onChange={inputChange} />
+                             onChange={inputChange} 
+                             disabled={disable}/>
     }
 
     if(param.type === "file"){
@@ -30,14 +32,16 @@ function GenerateInput({
                              className={param.name} 
                              id={param.id}
                              onChange = {inputChange}
-                             accept={param.accept} />
+                             accept={param.accept} 
+                             disabled={disable}/>
     }
 
     if(param.type === "select"){
         return <Form.Select className={param.name}
                             id={param.id}
                             required={param.isRequired}
-                            onChange={selectChange}>
+                            onChange={selectChange}
+                            disabled={disable}>
                     {
                         param.option.map(each =>
                             <option value={each}>{each}</option>
@@ -53,6 +57,7 @@ function GenerateInput({
 
 export function Input({
     param,
+    disable,
     inputChange,
     selectChange
 }: InputConfig){
@@ -60,6 +65,7 @@ export function Input({
         <Form.Group className='form-input' style={styles}>
             <Form.Label>{param.label}</Form.Label>
             <GenerateInput param={param}
+                           disable={disable}
                            inputChange={inputChange}
                            selectChange={selectChange} />
         </Form.Group>    
