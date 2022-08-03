@@ -16,20 +16,23 @@ Design pattern utama yang digunakan untuk frontend hanya composite. Design patte
 
 ## Techonology Stack
 Berikut ini beberapa dependency yang digunakan
-1. express (^4.18.1)  
-2. prisma (^4.1.1)
-3. typescript (^4.7.4)
-4. nodemon (^2.0.19)
-5. jsonwebtoken (^8.5.1)
-6. memory-cache (^0.2.0)
-7. cors (^2.8.5)
+1. react (^18.2.0)
+2. firebase (^9.9.1)
+3. bootstrap (^5.2.0)
+4. react-bootstrap (^2.4.0)
+5. react-cookit (^4.1.1)
+6. typescript (^4.7.4)
 
 Selengkapnya dapat dilihat pada package.json
 
-## Endpoint API
-
-Endpoint yang digunakan adalah 
-1. `/profile`, method get dan patch
-2. `/mutasi`, method patch, post, dan get
-3. `/history`, method get
-4. `/authen`, method get, post, dan patch
+## Route
+Ada beberapa route yang diimpelemntasikan, yaitu
+1. `/login`, halaman login
+2. `/signup`, halaman signup
+3. `/profile`, halaman profile customer
+4. `/admin`, halaman profile admin
+5. `/transfer`, halaman transfer customer
+6. `/mutasi`, halaman mutasi customer
+7. `/histmutasi`, halaman melihat riwayat mutasi
+8. `/histtransfer`, halaman melihat riwayat transfer
+9. `/logout`, halaman logout
