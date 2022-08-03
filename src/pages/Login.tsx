@@ -4,6 +4,7 @@ import { loginFields } from "../constants/Login"
 import React, { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import {useNavigate } from "react-router-dom";
+import {useCookies} from "react-cookie";
 import ToastGen from "../components/toastComponents/ToastGen";
 
 let fieldState = {};
@@ -14,6 +15,7 @@ export function Login(){
     const [tryLogin, setTryLogin] = useState("");
     const {isLogged, loginUser, user} = useAuth();
     const [disable, setDisable] = useState(false);
+    const [token, setToken] = useCookies(['token']);
     const navigate = useNavigate();
 
     const onClose = (e : React.MouseEvent<Element, MouseEvent> | React.KeyboardEvent<Element> | undefined) =>{
@@ -40,6 +42,7 @@ export function Login(){
 
         const data = await loginUser(loginState);
         if(data.status === "Success"){
+            setToken('token', data.data.token);
             setLoginValid(true);
         }else{
             setDisable(true);
@@ -67,6 +70,7 @@ export function Login(){
                 useFooter={loginFields.useFooter}
                 footer={loginFields.footer}
                 buttonParam={loginFields.button}
+                option={[['']]}
                 disable={loginFields.disable || disable}
                 handleSubmit = {handleSubmit}
                 inputChange = {inputChange}

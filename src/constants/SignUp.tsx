@@ -23,7 +23,7 @@ export const signUpFields = {
             isRequired: true,
             placeholder: "example",
             accept:"",
-            option:[],
+            ind:-1,
         },
         {
             label: "Username",
@@ -33,7 +33,7 @@ export const signUpFields = {
             isRequired: true,
             placeholder: "example",
             accept:"",
-            option:[],
+            ind:-1,
         },
         {
             label: "Password",
@@ -43,17 +43,17 @@ export const signUpFields = {
             isRequired: true,
             placeholder: "***********",
             accept:"",
-            option:[],
+            ind:-1,
         },
         {
             label: "Foto KTP",
-            name : "foto-ktp",
-            id: "foto-ktp",
+            name : "fotoKtp",
+            id: "fotoKtp",
             type: "file",
             isRequired: true,
             placeholder: "No file chosen",
             accept:"image/png, image/jpeg",
-            option:[],
+            ind:-1,
         }
     ]
 }

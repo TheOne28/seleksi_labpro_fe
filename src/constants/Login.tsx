@@ -23,7 +23,7 @@ export const loginFields = {
             isRequired: true,
             placeholder:"example",
             accept: "",
-            option: []
+            ind:-1,
         },
         {
             label: "Password",
@@ -33,7 +33,7 @@ export const loginFields = {
             isRequired: true,
             placeholder:"************",
             accept: "",
-            option: [],
+            ind:-1,
         }
     ]   
 }

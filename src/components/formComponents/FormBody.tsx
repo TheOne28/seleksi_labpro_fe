@@ -23,6 +23,7 @@ export default function FormBody({
     useFooter,
     footer,
     buttonParam,
+    option,
     disable,
     handleSubmit,
     inputChange,
@@ -37,6 +38,7 @@ export default function FormBody({
                     <Input
                         disable={disable}
                         param={each}
+                        option={option}
                         inputChange={inputChange}
                         selectChange={selectChange}
                     />

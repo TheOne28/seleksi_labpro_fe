@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import CSS from 'csstype';
+import { UserIf } from '../../models/UserIf';
 
 const containerStyles : CSS.Properties = {
     lineHeight: "2",
@@ -19,14 +20,19 @@ const usernameStyles : CSS.Properties = {
     fontWeight : "bold",
 }
 
-export default function Content(){
+export default function Content({
+    username,
+    name,
+    saldo,
+}:UserIf){
+    console.log(username);
+    console.log("In");
     return  (
         <Container style={containerStyles}>
             <Row style={styles}>Profil</Row>
-            <Row style={usernameStyles}>Username: Vincent</Row>
-            <Row>Password: vincent</Row>
-            <Row>Name: Vincent</Row>
-            <Row>Saldo: 000000</Row>
+            <Row style={usernameStyles}>Username: {username}</Row>
+            <Row>Name: {name}</Row>
+            <Row>Saldo: {saldo}</Row>
         </Container>
     )
 }

@@ -12,10 +12,11 @@ const styles: CSS.Properties= {
 function GenerateInput({
     param,
     disable,
+    option,
     inputChange,
     selectChange,
 }: InputConfig){
-    if(param.type === "text" || param.type === "password"){
+    if(param.type === "text" || param.type === "password" || param.type === "number"){
         return <Form.Control required={param.isRequired}
                              type={param.type}
                              placeholder={param.placeholder}
@@ -43,7 +44,7 @@ function GenerateInput({
                             onChange={selectChange}
                             disabled={disable}>
                     {
-                        param.option.map(each =>
+                        option[param.ind].map(each =>
                             <option value={each}>{each}</option>
                         )    
                     }
@@ -58,6 +59,7 @@ function GenerateInput({
 export function Input({
     param,
     disable,
+    option,
     inputChange,
     selectChange
 }: InputConfig){
@@ -66,6 +68,7 @@ export function Input({
             <Form.Label>{param.label}</Form.Label>
             <GenerateInput param={param}
                            disable={disable}
+                           option={option}
                            inputChange={inputChange}
                            selectChange={selectChange} />
         </Form.Group>    

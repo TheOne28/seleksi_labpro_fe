@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import AuthContext from "../context/authContext";
-import { login } from "../lib/login";
+import { login } from "../lib/auth";
 import axios from 'axios';
+
 
 export default function useAuth(){
     const {isLogged, user, token, setToken, setUser, setIsLogged} = useContext(AuthContext);
@@ -20,10 +21,6 @@ export default function useAuth(){
                 status: "Success",
                 data: data
             };
-            // return {
-            //     status: "Error",
-            //     data: data.data,
-            // }
         } catch(err){
             console.log("Here");
             if(axios.isAxiosError(err)){

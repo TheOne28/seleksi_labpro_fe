@@ -16,23 +16,23 @@ export const transferFields = {
     input:[
         {
             label:"Username Dest",
-            name:"username-dest",
-            id:"username-dest",
+            name:"target",
+            id:"target",
             type:"text",
             isRequired: true,
             placeholder: "example",
             accept:"",
-            option: [],
+            ind:-1,
         },
         {
             label:"Amount",
             name: "amount",
             id: "amount",
-            type:"text",
+            type:"number",
             isRequired: true,
             placeholder: "9999999",
             accept:"",
-            option:[],
+            ind:-1,
         },
         {
             label:"Currency",
@@ -42,7 +42,7 @@ export const transferFields = {
             isRequired:true,
             placeholder:"",
             accept:"",
-            option:['A', 'B', 'C'],
+            ind:0,
         }
     ]
 

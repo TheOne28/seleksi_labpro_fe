@@ -1,1 +1,0 @@
-# seleksi_labpro_fe

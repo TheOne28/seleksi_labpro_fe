@@ -21,7 +21,7 @@ export const mutasiFields = {
             isRequired: true,
             placeholder: "9999999",
             accept:"",
-            option:[],
+            ind:-1,
         },
         {
             label:"Currency",
@@ -31,7 +31,7 @@ export const mutasiFields = {
             isRequired:true,
             placeholder:"",
             accept:"",
-            option:['A', 'B', 'C'],
+            ind:1,
         },
         {
             label:"Tipe",
@@ -41,7 +41,7 @@ export const mutasiFields = {
             isRequired:true,
             placeholder:"",
             accept:"",
-            option:["Pendapatan", "Pengeluaran"],
+            ind:0,
         }
     ]
 

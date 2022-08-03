@@ -9,6 +9,7 @@ import { RiwayatMutasi } from "./pages/customer/RiwayatMutasi";
 import { RiwayatTransfer } from "./pages/customer/RiwayatTransfer";
 import {AuthContextProvider} from "./context/authContext";
 import './App.css'
+import { LogOut } from "./pages/Logout";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route path="/mutasi" element={<Mutasi/>}></Route>
               <Route path="/histmutasi" element={<RiwayatMutasi/>}></Route>
               <Route path="/histtransfer" element={<RiwayatTransfer/>}></Route>
+              <Route path="/logout" element={<LogOut/>}></Route>
             </Routes>
           </Router>
         </div>

@@ -6,6 +6,8 @@ import CSS from 'csstype';
 import Container from "react-bootstrap/Container"
 import Col  from "react-bootstrap/Col"
 import Row  from "react-bootstrap/Row"
+import useAuth  from "../../hooks/useAuth";
+import { UserIf } from "../../models/UserIf";
 
 
 const styles : CSS.Properties = {
@@ -25,17 +27,25 @@ const colStyles : CSS.Properties ={
 }
 
 export function Profile(){
+    const {user} = useAuth();
+
     return <>
         <NavbarBody type="customer"/>
         <Container className="d-flex" style={styles} fluid>
             <Row style={rowStyles}>
                 <Col xs={12} md={6} style={colStyles}>
                     <div>
-                        <Content></Content>
+                        {/*@ts-ignore*/}
+                        <Content username={user?.username}
+                                //@ts-ignore
+                                 saldo={user?.saldo}
+                                 //@ts-ignore
+                                 name={user.name}></Content>
                     </div>
                 </Col>
                 <Col xs={6} md ={6}>
-                    <Photo photoUrl={profile.photoUrl}></Photo>
+                    {/*@ts-ignore*/}
+                    <Photo photoUrl={user?.linkKtp}></Photo>
                 </Col>
             </Row>
         </Container>
